@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1. Join with - >>  {{ data.list1 | join:" - " }} 2. Join with />>{{ data.list1 | join:" / " }}</p>
+    <p>3. Date Format >> {{ data.birthday|date:"SHORT_DATE_FORMAT" }} 4. Date >> {{ data.birthday|date }} 5. Date Format >>  {{ data.birthday|date:"D d M Y" }}</p>
+    <p>6. Add Value >> {{ data.age| add:"5" }}</p>
+    <p>7.Capfirst   >>  {{ data.name| capfirst }}</p>
+    <p>8.Cut   >>   {{ data.name| cut:" " }}</p>
+    <p>9.Dictsort  >>  {{ data.courses| dictsort:"name" }}</p>
+    <p>10.List First>>{{ data.courses | first }}</p>
+    <p>11.List Last>>{{ data.courses | last }}</p>
+    <p>12.Length>>{{ data.courses |length }}</p>
+    <p>13.LineNumbers>>{{ data.courses | linenumbers }}</p>
+    <p>14.Upper>>{{ data.name| upper }}</p>
+    <p>15.Title>>{{ data.name| title }}</p>
+    <p>16.Slice>>{{ data.courses | slice:'1' }}</p>
+    <p>17.Time Format>>{{ data.birthday|time:'H:i' }}  18.Time Format>>{{ data.birthday|time:'H\h i\m' }}</p>
+    <p>19.Truncatechars>>{{ data.des | truncatechars:6 }}  20.Truncatewords{{ data.des | truncatewords:3 }}</p>
+    <p>21.Wordcount>>{{ data.des |wordcount }}</p>
+    <p>22.Makelist >>{{data.des | make_list}}</p>
+    <p></p>
+</body>
+</html>
