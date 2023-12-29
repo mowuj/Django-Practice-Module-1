@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center">Practice API Form</h1>
+    
+    <div>
+        <form action="" class="w-50 m-auto">
+            {% load crispy_forms_tags %}
+            {{form | crispy}}
+        </form>
+    </div>
+
+    {% endblock content %}
