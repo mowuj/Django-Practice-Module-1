@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Welcome to your Profile</h1>
+<h1 class="text-center">Welcome to your Profile</h1>
 
-<a href="{% url 'change_pass' %}" class="btn btn-info">Change Your Password</a>
+{% for i in messages %}
+  <h1 class="text-{{i.tags}}">{{i}}</h1>
+{% endfor %}
+
+<div class="d-flex justify-content-center mt-3">
+    <a href="{% url 'change_pass' %}" class="btn btn-info">Change Your Password</a>
+</div>
 {% endblock content %}

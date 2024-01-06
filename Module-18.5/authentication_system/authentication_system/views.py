@@ -35,6 +35,9 @@ def user_login(request):
         form=AuthenticationForm()
     return render(request,'register.html',{'form':form,'type':'Login'})
 
+def home(request):
+    return render (request,'home.html')
+
 @login_required()
 def profile(request):
     return render(request,'profile.html')
@@ -57,4 +60,5 @@ def change_pass(request):
 @login_required()
 def user_logout(request):
     logout(request)
-    return redirect('login')
+    messages.success(request, 'Logged out successful')
+    return redirect('home')
